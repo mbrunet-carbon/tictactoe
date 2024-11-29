@@ -1,9 +1,14 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
+import { Board } from './components/board/Board';
 
-test('renders learn react link', () => {
+jest.mock('./components/board/Board')
+
+test('Should exists', () => {
+  // Given + When
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  // Then
+  expect(Board).toHaveBeenCalled()
 });

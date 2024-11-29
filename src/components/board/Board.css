@@ -1,0 +1,26 @@
+.board {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 1rem;
+}
+.board-status {
+    margin: 1rem auto;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1;
+}
+.board-rows {
+    grid-column: 1;
+    grid-row: 2;
+}
+.board-history {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+}
+.board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+}
